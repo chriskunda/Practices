@@ -12,4 +12,4 @@ function cardCounter(card) {
   return count > 0 ? `${count} Bet` : `${count} Hold`;
 }
 
-console.log(cardCounter());
+console.log(cardCounter(90));

@@ -28,3 +28,10 @@ const addHabitat = (animal, habitat) => {
 }
 
 console.log(addHabitat(tiger, "Rainforest")); //To add the value to the added property in the tiger object.
+
+const updateAge = (animal, newAge) => {
+  animal.age = newAge;
+  return animal;
+};
+
+console.log(updateAge(elephant, 12)); //To update the age of the elephant object.

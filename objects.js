@@ -35,3 +35,29 @@ const updateAge = (animal, newAge) => {
 };
 
 console.log(updateAge(elephant, 12)); //To update the age of the elephant object.
+
+
+const removeEndangeredStatus = (animal) =>{
+  delete animal.isEndangered;
+  return animal;
+}
+
+console.log(removeEndangeredStatus(tiger)); //To remove the isEndangered property from the tiger object.
+
+const hasHabitat = (animal) =>{
+  if (animal.hasOwnProperty("habitat")){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(hasHabitat(tiger)); //To check if the tiger object has a habitat property.
+console.log(hasHabitat(elephant)); //To check if the elephant object has a habitat property.
+
+const getProperty = (animal, propertyName) =>{
+  return animal[propertyName];
+}
+
+console.log(getProperty(tiger, "species")); //To get the species of the tiger object.
+console.log(getProperty(elephant, "age")); //To get the age of the elephant object.

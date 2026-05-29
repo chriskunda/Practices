@@ -20,15 +20,23 @@ const recordCollection = {
 
 const updateRecords = (records, id, prop, value) => {
 
-  if (!value) {
-    delete records[id][prop];  // ❌ You had: delete records.prop (wrong — ignores id, uses dot notation for dynamic prop)
-  } else if (prop !== 'tracks') {
-    records[id][prop] = value;  // ❌ You had: prop !== records.tracks (comparing string to object) and records.prop (wrong access)
-  } else if (!records[id].tracks) {
-    records[id].tracks = [value];  // ❌ You had: created newArr but never assigned it to the record
-  } else {
-    records[id].tracks.push(value);  // ❌ You had: records.tracks.push (missing [id])
-  }
+if (!value) {
+  // If value is empty, remove the property from this record.
+  // This handles the rule that blank values should delete the field.
+  delete records[id][prop];
+} else if (prop !== 'tracks') {
+  // If the property is not "tracks", simply set/replace it.
+  // For regular fields like albumTitle or artist, assign the new value.
+  records[id][prop] = value;
+} else if (!records[id].tracks) {
+  // If prop is "tracks" but the record has no tracks array yet,
+  // create a new array containing the single new track.
+  records[id].tracks = [value];
+} else {
+  // If prop is "tracks" and the array already exists,
+  // append the new track to the existing list.
+  records[id].tracks.push(value);
+}
 
   return records;  // ✅ This was correct
 }

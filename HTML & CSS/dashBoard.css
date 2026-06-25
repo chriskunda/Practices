@@ -67,8 +67,12 @@
     justify-content: center;
 }
 
-.two>h1{
+.img1{
     margin-right: 20px;
+    border-radius: 100%;
+    border: 1px solid black;
+    background-color: rgb(225, 225, 0);
+    height: 55px;
 }
 
 button{

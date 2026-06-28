@@ -9,12 +9,12 @@
     <img src="#">
   <script>
   const img = document.querySelector('img');
-  fetch('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzdwOGV1eTlkZzltdWdmNjdod2lhY3Q2MWZoeTEwbG44Y2lkeThvaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tXL4FHPSnVJ0A/giphy.gif')
+  fetch('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjgyZnAwZXpsNW5zOHI2OGFvbG82bmI0dXY2bnc5dG53YWw1dnhicSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QhjR3MG9ZFfjB6BtIZ/giphy.gif')
     .then(function(response) {
       return response.json();
     })
     .then(function(response) {
-      console.log(response);
+      console.log(response.data.images.original.url);
     });
 </script>
 </body>

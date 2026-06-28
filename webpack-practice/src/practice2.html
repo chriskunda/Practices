@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="#">
+  <script>
+  const img = document.querySelector('img');
+  fetch('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzdwOGV1eTlkZzltdWdmNjdod2lhY3Q2MWZoeTEwbG44Y2lkeThvaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tXL4FHPSnVJ0A/giphy.gif')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      console.log(response);
+    });
+</script>
+</body>
+</html>

@@ -26,4 +26,4 @@ const server = {
   
 };
 
-console.log(getPeople());
+console.log(server);
